@@ -5,4 +5,5 @@ from .models import Person
 
 def index_view(request):
     people = Person.objects.all()
-    return render(request, 'app/index.html', context={'people': people})
+    context = {'people': people}
+    return render(request, 'app/index.html', context)
