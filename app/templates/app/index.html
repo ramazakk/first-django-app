@@ -1,0 +1,20 @@
+{% extends 'base_template.html' %}
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">SUN PHARMA</h1>
+  <p class="lead">HELLO</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <ul>
+    {% for p in people %}
+    <li>{{ p }}, email: {{ p.email }}</li>
+    {% endfor %}
+    </ul>
+    <button id="bt">OK</button>
+</div>
+<script>
+    $("#bt").click(function(){
+        alert('Hello!');
+    });
+</script>
+{% endblock %}
